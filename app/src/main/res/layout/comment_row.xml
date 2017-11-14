@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:paddingTop="12dp"
+    android:paddingBottom="12dp"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.facebook.login.widget.ProfilePictureView
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="16dp"
+            android:id="@+id/profilePic"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+
+
+        <com.ilma.testing.ilmaapp.CustomFonts.CustomTextViewMedium
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Body1"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@+id/profilePic"
+            android:id="@+id/Post_Owner"
+            android:text="Anas Ahmed"
+            android:textStyle="bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.ilma.testing.ilmaapp.CustomFonts.CustomTextView
+            android:layout_below="@+id/Post_Owner"
+            android:id="@+id/comment"
+            android:layout_toRightOf="@+id/profilePic"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Hi"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.ilma.testing.ilmaapp.CustomFonts.CustomTextViewThin
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"
+            android:layout_marginLeft="16dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/profilePic"
+            android:layout_below="@+id/comment"
+            android:id="@+id/duration"
+            android:text="Just now"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+
+
+
+
+</LinearLayout>

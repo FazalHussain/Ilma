@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ilma.testing.ilmaapp.Activities.LoginActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_weight="0.2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+    <ImageView
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:visibility="visible"
+        android:layout_weight="1"
+        android:background="@drawable/ilmalogo"
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+
+    <LinearLayout
+        android:layout_weight="1.8"
+        android:padding="8dp"
+        android:background="@drawable/round_layout"
+        android:orientation="vertical"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="26sp"
+            android:text="Admin Panel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/admin_name"
+            android:padding="12dp"
+            android:maxLines="1"
+            android:background="@drawable/round_et"
+            android:hint="Admin Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/admin_pass"
+            android:padding="12dp"
+            android:maxLines="1"
+            android:imeOptions="actionDone"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/round_et"
+            android:hint="Admin Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/login_admin"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center_horizontal"
+            android:text="Login as admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+        <View
+            android:layout_weight="0.2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+        <Button
+            android:layout_weight="0.03"
+            android:onClick="CustomLoginClick"
+            android:textColor="@android:color/white"
+            android:text="@string/login_with_fb"
+            android:layout_margin="16dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/round"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+
+
+
+    <com.facebook.login.widget.LoginButton
+        android:layout_margin="16dp"
+        android:visibility="gone"
+        android:id="@+id/facebook_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/progress_bar"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

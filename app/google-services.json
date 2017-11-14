@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "116749129826",
+    "firebase_url": "https://ilmaapp-31cda.firebaseio.com",
+    "project_id": "ilmaapp-31cda",
+    "storage_bucket": "ilmaapp-31cda.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:116749129826:android:f76c67eae50aa27b",
+        "android_client_info": {
+          "package_name": "com.ilma.testing.ilmaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "116749129826-un9m85bagnv9lm2l46vmae6ovbof7q9n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ilma.testing.ilmaapp",
+            "certificate_hash": "b88f82c29b976fbeeb65befa1ba1b9d432b4c24f"
+          }
+        },
+        {
+          "client_id": "116749129826-nq30833cup19bedqostmsp95bmurmk8r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsyZJe8LDRFhZDX-LajMAoGOto_UmonBQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "116749129826-nq30833cup19bedqostmsp95bmurmk8r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

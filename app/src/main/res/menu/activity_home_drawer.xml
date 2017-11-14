@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/newsfeed"
+            android:icon="@drawable/newsfeed"
+            android:title="News Feed" />
+
+        <item
+            android:id="@+id/post_compose"
+            android:icon="@drawable/ic_edit_black_36dp"
+            android:title="Post" />
+
+        <item
+            android:id="@+id/leave_request"
+            android:icon="@drawable/ic_profile_black_24dp"
+            android:title="Leave Request" />
+
+        <item
+            android:id="@+id/profileinfo"
+            android:icon="@drawable/ic_profile_black_24dp"
+            android:title="Profile Info" />
+    </group>
+
+    <item android:title="Logout">
+        <menu>
+
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_input_black_24dp"
+                android:title="Logout" />
+
+        </menu>
+    </item>
+
+</menu>

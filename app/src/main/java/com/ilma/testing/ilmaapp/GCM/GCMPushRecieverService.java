@@ -30,10 +30,11 @@ public class GCMPushRecieverService extends GcmListenerService {
 
     @Override
     public void onMessageReceived(String s, Bundle data) {
-        sendNotification1(data.getString("message"), data.getString("title"));
+        sendNotification1(data.getString("message"),data.getString("startDate"),
+                data.getString("endDate"), data.getString("title"));
     }
 
-    private void sendNotification1(String message, String title) {
+    private void sendNotification1(String message, String start_date, String end_date, String title) {
 
         mNotificationManager = (NotificationManager)
                 this.getSystemService(Context.NOTIFICATION_SERVICE);
@@ -50,6 +51,8 @@ public class GCMPushRecieverService extends GcmListenerService {
         intent.putExtra("role", "admin");
         intent.putExtra("status", "popup");
         intent.putExtra("msg", message);
+        intent.putExtra("start_date", start_date);
+        intent.putExtra("end_date", end_date);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, (int) ((new Date().getTime() /
                 1000L) % Integer.MAX_VALUE), intent,
                 PendingIntent.FLAG_ONE_SHOT);

@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -29,6 +30,10 @@ import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.ilma.testing.ilmaapp.GCM.GcmRegistrationIntentService;
 import com.ilma.testing.ilmaapp.R;
 import com.ilma.testing.ilmaapp.fragments.EmployeeList;
+
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 public class AdminActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -124,6 +129,7 @@ public class AdminActivity extends AppCompatActivity
                         .setPositiveButton("Accept", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
+
                                 dialogInterface.dismiss();
                             }
                         })
@@ -154,6 +160,39 @@ public class AdminActivity extends AppCompatActivity
                 startService(intent);
             }
         }
+    }
+
+    private void sendRequest() {
+
+        final String msg = getIntent().getStringExtra("msg");
+        final String start_date = getIntent().getStringExtra("start_date");
+        final String end_date = getIntent().getStringExtra("end_date");
+        new AsyncTask<Void,Void,Void>(){
+
+            @Override
+            protected Void doInBackground(Void... voids) {
+                OkHttpClient client = new OkHttpClient();
+       /* RequestBody requestbody = new FormBody.Builder()
+                .add("token",token)
+                .add("Name","")
+                .build();*/
+                //Log.d("UserID",utils.getdata("Userid"));
+                Request request = new Request.Builder()
+                        .url("https://tippiest-reactors.000webhostapp.com/PKT/addAdminAction.php?" +
+                                "LeaveReason=" + msg + "&title=Leave Request")
+                        .build();
+
+                try{
+                    Response response = client.newCall(request).execute();
+                    Log.d("token_send",response.body().string());
+
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+                return null;
+            }
+        }.execute();
+
     }
 
     @Override

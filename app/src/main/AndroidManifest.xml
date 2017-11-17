@@ -65,7 +65,7 @@
         <activity
             android:name=".Activities.AdminActivity"
             android:label="@string/title_activity_admin"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <receiver
             android:name="com.google.android.gms.gcm.GcmReceiver"
@@ -92,6 +92,9 @@
                 <action android:name="com.google.android.gms.iid.InstanceID" />
             </intent-filter>
         </service>
+
+        <activity android:name=".Activities.SendRequestActivity"
+            android:label="Compose Leave Request"></activity>
     </application>
 
 </manifest>

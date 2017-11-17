@@ -664,6 +664,9 @@ public class HomeActivity extends AppCompatActivity
 
         }else if (id == R.id.leave_request) {
              sendRequest();
+             Intent i = new Intent(this, SendRequestActivity.class);
+             i.putExtra("Username", UserName);
+             startActivity(i);
 
          } else if (id == R.id.profileinfo) {
             profile_click();
